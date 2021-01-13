@@ -103,3 +103,9 @@ ret,img1=c.threshold(gray,128,255,c.THRESH_BINARY)
 c.imshow('image',img1)
 c.waitKey(0)
 c.destroyAllWindows()
+
+![image](https://user-images.githubusercontent.com/72264974/104430258-73c5a280-55ac-11eb-98a9-f26728982392.png)
+![image](https://user-images.githubusercontent.com/72264974/104430305-82ac5500-55ac-11eb-8ade-7f4d35fe1999.png)
+![image](https://user-images.githubusercontent.com/72264974/104430363-95bf2500-55ac-11eb-812a-3e65f7eca34c.png)
+
+
