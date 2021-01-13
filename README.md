@@ -37,3 +37,5 @@ rotatedImage = cv2.warpAffine(image, rotationMatrix, (Width, Height))
 cv2.imshow('new',rotatedImage )
 cv2.waitKey(0)   
 cv2.destroyAllWindows()
+
+![image](https://user-images.githubusercontent.com/72264974/104427451-43c8d000-55a9-11eb-8865-a3869776913d.png)
