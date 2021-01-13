@@ -127,3 +127,9 @@ c.imshow('Result4',nimg3)
 c.waitKey(0)
 c.destroyAllWindows()
 
+
+![image](https://user-images.githubusercontent.com/72264974/104430674-01a18d80-55ad-11eb-9b7f-f6e4e71994b2.png)
+![image](https://user-images.githubusercontent.com/72264974/104430743-1847e480-55ad-11eb-9226-2946fbba2d4e.png)
+![image](https://user-images.githubusercontent.com/72264974/104430862-40374800-55ad-11eb-8d62-065f46c18199.png)
+![image](https://user-images.githubusercontent.com/72264974/104430986-64932480-55ad-11eb-8b4f-d3b9eee45c0f.png)
+![image](https://user-images.githubusercontent.com/72264974/104431067-7b397b80-55ad-11eb-8971-60104cea5f1e.png)
