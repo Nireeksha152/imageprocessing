@@ -54,3 +54,6 @@ c.waitKey(0)
 print(nimg.shape[0:2])
 c.destroyAllWindows()
 
+![image](https://user-images.githubusercontent.com/72264974/104427897-cd789d80-55a9-11eb-8b58-fc30ebb79696.png)
+![image](https://user-images.githubusercontent.com/72264974/104427983-e719e500-55a9-11eb-9128-3d181381ae76.png)
+
