@@ -23,3 +23,17 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72264974/104425840-26930200-55a7-11eb-958f-ab6221a2602f.png)
 ![image](https://user-images.githubusercontent.com/72264974/104426116-85f11200-55a7-11eb-9c9e-ccdb3156c59a.png)
+
+#rotation of the image
+import cv2 
+import numpy as np
+image = cv2.imread('Rose.jpg')
+print(type(image))
+cv2.imshow('Old', image) 
+Height,Width=image.shape[0:2]
+rotationMatrix=cv2.getRotationMatrix2D((Width/2,Height/2),45,.9)
+rotatedImage = cv2.warpAffine(image, rotationMatrix, (Width, Height))
+#numpy_horizontal_concat = np.concatenate((image, rotatedImage), axis=1)
+cv2.imshow('new',rotatedImage )
+cv2.waitKey(0)   
+cv2.destroyAllWindows()
