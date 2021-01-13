@@ -86,4 +86,20 @@ meanImg = im/len(files)
 cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
 
+![image](https://user-images.githubusercontent.com/72264974/104429624-d8ccc880-55ab-11eb-9179-5e7f2a085c6c.png)
+![image](https://user-images.githubusercontent.com/72264974/104429716-f26e1000-55ab-11eb-9aaf-2f65bb506309.png)
 
+Program4:
+Develop the program to convert color image to gray image and binary image.
+
+import cv2 as c
+img=c.imread('i1.jpg')
+c.imshow('colour image',img)
+c.waitKey(0)
+gray=c.imread('i1.jpg',0)
+c.imshow('Result',gray)
+c.waitKey(0)
+ret,img1=c.threshold(gray,128,255,c.THRESH_BINARY)
+c.imshow('image',img1)
+c.waitKey(0)
+c.destroyAllWindows()
