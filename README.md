@@ -1,5 +1,6 @@
 # imageprocessing
-Program1:Develop a program to display grayscale image using read and write operation.
+Program1:
+Develop a program to display grayscale image using read and write operation.
 
 GRAY SCALING:
    Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
@@ -9,6 +10,7 @@ cv2.imwrite() this method is use to write the image.
 cv2.cvtColor() this method is used to convert an image from one color space to another.
 cv2.destroyAllWindows() If we have multiple window open and we donot need those to be open we can use this method to close those all
 cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
+cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
 
 import cv2 
 import numpy as np
@@ -21,14 +23,23 @@ cv2.imwrite('sample.jpg',gray)
 cv2.waitKey(0)   
 cv2.destroyAllWindows()
 
+OUTPUT:
 ![image](https://user-images.githubusercontent.com/72264974/104425840-26930200-55a7-11eb-958f-ab6221a2602f.png)
 ![image](https://user-images.githubusercontent.com/72264974/104426116-85f11200-55a7-11eb-9c9e-ccdb3156c59a.png)
 
-program2: Develop the program to perform linear transformation on a image:Scaling and Rotation.
+program2: 
+  Develop the program to perform linear transformation on a image:Scaling and Rotation.
+  Linear transformation:
+        Piece-wise linear transformation is type of gray level transformations that is used for image enhancement.It is an spatial domain method.It is used for manipulation of 
+an image so the result is more suitable than the original for specific application.        
 Rotation of the Image:
    The image can be rotated in various angles(90,180,270 and 360).OpenCV calculates the affine matrix that performas affine transformation ,which mean it doesnot preserves the
 rotation of distance between points lying on the lines.
-
+Scaling:
+    Image resizing refers to the scaling of images.It helps in reducing the number of pixel from an image and that has several advantages.Resizing an image means changing  the
+  dimension of it  by changing its width alone,height alone or both.
+  
+  
 #rotation of the image
 import cv2 
 import numpy as np
@@ -65,6 +76,10 @@ c.destroyAllWindows()
 
 Program3:Develop a program to find the sum and mean of a set of images. 
  a.Create ‘n’ number of images and read them from the directory and perform the operations.
+Mean:
+   'mean' value gives the contribution of individual pixel intensity for the entire image & variance is normally used to find how each pixel varies from the neighbouring pixel (or centre pixel) and is used in classify into different regions
+
+The OS module in python provides functions for interacting with the operating system. OS, comes under Python’s standard utility modules. This module provides a portable way of using operating system dependent functionality. The *os* and *os.path* modules include many functions to interact with the file system.
 
 import cv2
 import os
@@ -91,7 +106,14 @@ cv2.waitKey(0)
 
 Program4:
 Develop the program to convert color image to gray image and binary image.
+Gray Image:
+  Grayscale is a range of monochromatic shades from black to white. Therefore, a grayscale image contains only shades of gray and no color.
+Many image editing programs allow you to convert a color image to black and white, or grayscale. This process removes all color information, leaving only the luminance of each pixel. Since digital images are displayed using a combination of red, green, and blue (RGB) colors, each pixel has three separate luminance values. Therefore, these three values must be combined into a single value when removing color from an image.
 
+Binary Image:
+   A binary image is the type of image where each pixel is black or white.Binary images are images whose pixels have only two possible intensity values they normally displayed as black and white ,numerically the two values are often 0 for black and either 1 or 255 for  white.binary image  are often produced by thresholding a grayscale or color image in order to separate  an object in the image from background.
+ cv2.threshold():. For every pixel, the same threshold value is applied. If the pixel value is smaller than the threshold, it is set to 0, otherwise it is set to a maximum value. The function cv.threshold is used to apply the thresholding. The first argument is the source image, which should be a grayscale image. The second argument is the threshold value which is used to classify the pixel values. The third argument is the maximum value which is assigned to pixel values exceeding the threshold . 
+   
 import cv2 as c
 img=c.imread('i1.jpg')
 c.imshow('colour image',img)
@@ -108,7 +130,18 @@ c.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72264974/104430305-82ac5500-55ac-11eb-8ade-7f4d35fe1999.png)
 ![image](https://user-images.githubusercontent.com/72264974/104430363-95bf2500-55ac-11eb-812a-3e65f7eca34c.png)
 
-Program5:Develop the program to change the image to fifferent color spaces.
+Program5:Develop the program to change the image to different color spaces.
+Color spaces in Opencv:
+. Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. There are several different color spaces and each has its own significance.Some of the popular color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSV (Hue, Saturation, Value).
+. cv2.imread() this method loads an image from specified file.
+. c.cvtColor(img,c.COLOR_BGR2HSV): used to convert BGR color space to HSV color spaces
+. c.cvtColor(img,c.COLOR_BGR2RGB):used to convert BGR color space to RGB color spaces
+. c.cvtColor(img,c.COLOR_BGR2LUV):used to convert BGR color space to LUV color spaces
+ . c.cvtColor(img,c.COLOR_BGR2Lab):used to convert BGR color space to Labcolor spaces
+ cv2.destroyAllWindows() If we have multiple window open and we donot need those to be open we can use this method to close those all
+cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
+cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
+
 import cv2 as c
 img=c.imread('Rose.jpg')
 c.imshow('Original',img)
@@ -136,8 +169,11 @@ c.destroyAllWindows()
 
 Program6:
 Develop a program to create an image from 2D array (generate an array of random size).
-
-
+ . A image is an array or a matrix of squarepixe arranged in column and rows.
+ .2D arary means an array of arrays in this type of array the position of an data elements is refered by two indicies instead of one.
+ . PIL: Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that        adds support for opening, manipulating, and saving many different image file formats. 
+ .The numpy.zeros() function returns a new array of given shape and type, with zeros.
+ .cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
 import cv2 as c
 import numpy as np
 from PIL import Image
