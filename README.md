@@ -12,6 +12,7 @@ cv2.destroyAllWindows() If we have multiple window open and we donot need those 
 cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
 cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
 
+
 import cv2 
 import numpy as np
 image = cv2.imread('Rose.jpg') 
@@ -23,7 +24,7 @@ cv2.imwrite('sample.jpg',gray)
 cv2.waitKey(0)   
 cv2.destroyAllWindows()
 
-OUTPUT:
+
 ![image](https://user-images.githubusercontent.com/72264974/104425840-26930200-55a7-11eb-958f-ab6221a2602f.png)
 ![image](https://user-images.githubusercontent.com/72264974/104426116-85f11200-55a7-11eb-9c9e-ccdb3156c59a.png)
 
@@ -38,6 +39,7 @@ rotation of distance between points lying on the lines.
 Scaling:
     Image resizing refers to the scaling of images.It helps in reducing the number of pixel from an image and that has several advantages.Resizing an image means changing  the
   dimension of it  by changing its width alone,height alone or both.
+  
   
   
 #rotation of the image
@@ -56,6 +58,7 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72264974/104427451-43c8d000-55a9-11eb-8865-a3869776913d.png)
 ![image](https://user-images.githubusercontent.com/72264974/104427622-7672c880-55a9-11eb-9452-896ce735491b.png)
+
 
 
 #resizing the image using axis value
@@ -80,6 +83,8 @@ Mean:
    'mean' value gives the contribution of individual pixel intensity for the entire image & variance is normally used to find how each pixel varies from the neighbouring pixel (or centre pixel) and is used in classify into different regions
 
 The OS module in python provides functions for interacting with the operating system. OS, comes under Python’s standard utility modules. This module provides a portable way of using operating system dependent functionality. The *os* and *os.path* modules include many functions to interact with the file system.
+
+
 
 import cv2
 import os
@@ -114,6 +119,8 @@ Binary Image:
    A binary image is the type of image where each pixel is black or white.Binary images are images whose pixels have only two possible intensity values they normally displayed as black and white ,numerically the two values are often 0 for black and either 1 or 255 for  white.binary image  are often produced by thresholding a grayscale or color image in order to separate  an object in the image from background.
  cv2.threshold():. For every pixel, the same threshold value is applied. If the pixel value is smaller than the threshold, it is set to 0, otherwise it is set to a maximum value. The function cv.threshold is used to apply the thresholding. The first argument is the source image, which should be a grayscale image. The second argument is the threshold value which is used to classify the pixel values. The third argument is the maximum value which is assigned to pixel values exceeding the threshold . 
    
+   
+   
 import cv2 as c
 img=c.imread('i1.jpg')
 c.imshow('colour image',img)
@@ -141,6 +148,8 @@ Color spaces in Opencv:
  cv2.destroyAllWindows() If we have multiple window open and we donot need those to be open we can use this method to close those all
 cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
 cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
+
+
 
 import cv2 as c
 img=c.imread('Rose.jpg')
@@ -174,6 +183,8 @@ Develop a program to create an image from 2D array (generate an array of random 
  . PIL: Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that        adds support for opening, manipulating, and saving many different image file formats. 
  .The numpy.zeros() function returns a new array of given shape and type, with zeros.
  .cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
+ 
+ 
 import cv2 as c
 import numpy as np
 from PIL import Image
