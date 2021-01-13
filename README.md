@@ -24,6 +24,11 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72264974/104425840-26930200-55a7-11eb-958f-ab6221a2602f.png)
 ![image](https://user-images.githubusercontent.com/72264974/104426116-85f11200-55a7-11eb-9c9e-ccdb3156c59a.png)
 
+program2: Develop the program to perform linear transformation on a image:Scaling and Rotation.
+Rotation of the Image:
+   The image can be rotated in various angles(90,180,270 and 360).OpenCV calculates the affine matrix that performas affine transformation ,which mean it doesnot preserves the
+rotation of distance between points lying on the lines.
+
 #rotation of the image
 import cv2 
 import numpy as np
@@ -40,6 +45,7 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72264974/104427451-43c8d000-55a9-11eb-8865-a3869776913d.png)
 ![image](https://user-images.githubusercontent.com/72264974/104427622-7672c880-55a9-11eb-9452-896ce735491b.png)
+
 
 #resizing the image using axis value
 import cv2 as c
