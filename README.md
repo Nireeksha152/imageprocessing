@@ -40,3 +40,17 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72264974/104427451-43c8d000-55a9-11eb-8865-a3869776913d.png)
 ![image](https://user-images.githubusercontent.com/72264974/104427622-7672c880-55a9-11eb-9452-896ce735491b.png)
+
+#resizing the image using axis value
+import cv2 as c
+import numpy as np
+img=c.imread('cat.jpg')
+c.imshow('original',img)
+print(img.shape[0:2])
+c.waitKey()
+nimg=c.resize(img,(0,0),fx=0.75,fy=0.75)
+c.imshow('Result',nimg)
+c.waitKey(0)
+print(nimg.shape[0:2])
+c.destroyAllWindows()
+
