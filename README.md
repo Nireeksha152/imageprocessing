@@ -2,7 +2,8 @@
 Program1:Develop a program to display grayscale image using read and write operation.
 
 GRAY SCALING:
-      Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
+   Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
+      
 cv2.imread() this method loads an image from specified file.
 cv2.imwrite() this method is use to write the image.
 cv2.cvtColor() this method is used to convert an image from one color space to another.
