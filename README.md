@@ -108,4 +108,22 @@ c.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72264974/104430305-82ac5500-55ac-11eb-8ade-7f4d35fe1999.png)
 ![image](https://user-images.githubusercontent.com/72264974/104430363-95bf2500-55ac-11eb-812a-3e65f7eca34c.png)
 
+Program5:Develop the program to change the image to fifferent color spaces.
+import cv2 as c
+img=c.imread('Rose.jpg')
+c.imshow('Original',img)
+c.waitKey(0)
+nimg=c.cvtColor(img,c.COLOR_BGR2HSV)
+c.imshow('Result1',nimg)
+c.waitKey(0)
+nimg1=c.cvtColor(img,c.COLOR_BGR2RGB)
+c.imshow('Result2',nimg1)
+c.waitKey(0)
+nimg2=c.cvtColor(img,c.COLOR_BGR2LUV)
+c.imshow('Result3',nimg2)
+c.waitKey(0)
+nimg3=c.cvtColor(img,c.COLOR_BGR2Lab)
+c.imshow('Result4',nimg3)
+c.waitKey(0)
+c.destroyAllWindows()
 
