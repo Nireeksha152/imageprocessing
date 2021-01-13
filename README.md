@@ -139,12 +139,12 @@ c.destroyAllWindows()
 
 Program5:Develop the program to change the image to different color spaces.
 Color spaces in Opencv:
-. Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. There are several different color spaces and each has its own significance.Some of the popular color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSV (Hue, Saturation, Value).
-. cv2.imread() this method loads an image from specified file.
-. c.cvtColor(img,c.COLOR_BGR2HSV): used to convert BGR color space to HSV color spaces
-. c.cvtColor(img,c.COLOR_BGR2RGB):used to convert BGR color space to RGB color spaces
-. c.cvtColor(img,c.COLOR_BGR2LUV):used to convert BGR color space to LUV color spaces
- . c.cvtColor(img,c.COLOR_BGR2Lab):used to convert BGR color space to Labcolor spaces
+Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. There are several different color spaces and each has its own significance.Some of the popular color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSV (Hue, Saturation, Value).
+cv2.imread() this method loads an image from specified file.
+c.cvtColor(img,c.COLOR_BGR2HSV): used to convert BGR color space to HSV color spaces
+c.cvtColor(img,c.COLOR_BGR2RGB):used to convert BGR color space to RGB color spaces
+ c.cvtColor(img,c.COLOR_BGR2LUV):used to convert BGR color space to LUV color spaces
+ c.cvtColor(img,c.COLOR_BGR2Lab):used to convert BGR color space to Labcolor spaces
  cv2.destroyAllWindows() If we have multiple window open and we donot need those to be open we can use this method to close those all
 cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
 cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
@@ -178,11 +178,11 @@ c.destroyAllWindows()
 
 Program6:
 Develop a program to create an image from 2D array (generate an array of random size).
- . A image is an array or a matrix of squarepixe arranged in column and rows.
- .2D arary means an array of arrays in this type of array the position of an data elements is refered by two indicies instead of one.
- . PIL: Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that        adds support for opening, manipulating, and saving many different image file formats. 
- .The numpy.zeros() function returns a new array of given shape and type, with zeros.
- .cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
+ A image is an array or a matrix of squarepixe arranged in column and rows.
+ 2D arary means an array of arrays in this type of array the position of an data elements is refered by two indicies instead of one.
+ PIL: Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that        adds support for opening, manipulating, and saving many different image file formats. 
+ The numpy.zeros() function returns a new array of given shape and type, with zeros.
+ cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
  
  
 import cv2 as c
@@ -199,3 +199,44 @@ c.waitKey(0)
 
 ![image](https://user-images.githubusercontent.com/72264974/104431674-2b0ee900-55ae-11eb-8acc-2ea47fe110ce.png)
 
+ Program 8:Program to find the sum  of neighbour values in  a matrix:
+   
+   
+   
+import numpy as np
+
+M = [[1,2,3,4,5], [2,3,4,5,6],[3,4,5,6,7],[4,5,6,7,8],[5,6,7,8,9]]
+
+M = np.asarray(M)
+N = np.zeros(M.shape)
+
+def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): 
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: 
+                pass
+    return sum(l)-M[x][y]
+
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+
+print ("Original matrix:\n", M)
+print ("Summed neighbors matrix:\n", N) 
+output:
+ Original matrix:
+ [[1 2 3 4 5]
+ [2 3 4 5 6]
+ [3 4 5 6 7]
+ [4 5 6 7 8]
+ [5 6 7 8 9]]
+Summed neighbors matrix:
+ [[ 7. 13. 18. 23. 15.]
+ [13. 24. 32. 40. 27.]
+ [18. 32. 40. 48. 32.]
+ [23. 40. 48. 56. 37.]
+ [15. 27. 32. 37. 23.]]
