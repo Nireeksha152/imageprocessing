@@ -1,8 +1,8 @@
 # imageprocessing
-Program1:
-Develop a program to display grayscale image using read and write operation.
+***Program1:
+Develop a program to display grayscale image using read and write operation.***
 
-GRAY SCALING:
+***GRAY SCALING:***
    Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
       
 cv2.imread() this method loads an image from specified file.
@@ -12,7 +12,7 @@ cv2.destroyAllWindows() If we have multiple window open and we donot need those 
 cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
 cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
 
-
+```python
 import cv2 
 import numpy as np
 image = cv2.imread('Rose.jpg') 
@@ -23,8 +23,8 @@ cv2.imshow('Gray', gray)
 cv2.imwrite('sample.jpg',gray)
 cv2.waitKey(0)   
 cv2.destroyAllWindows()
-
-
+```
+***OUTPUT:***
 ![image](https://user-images.githubusercontent.com/72264974/104425840-26930200-55a7-11eb-958f-ab6221a2602f.png)
 ![image](https://user-images.githubusercontent.com/72264974/104426116-85f11200-55a7-11eb-9c9e-ccdb3156c59a.png)
 
