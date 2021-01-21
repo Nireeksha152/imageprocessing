@@ -73,10 +73,10 @@ c.imshow('Result',nimg)
 c.waitKey(0)
 print(nimg.shape[0:2])
 c.destroyAllWindows()
-
+output:
 ![image](https://user-images.githubusercontent.com/72264974/104427897-cd789d80-55a9-11eb-8b58-fc30ebb79696.png)
 ![image](https://user-images.githubusercontent.com/72264974/104427983-e719e500-55a9-11eb-9128-3d181381ae76.png)
-
+........
 Program3:Develop a program to find the sum and mean of a set of images. 
  a.Create ‘n’ number of images and read them from the directory and perform the operations.
 Mean:
@@ -106,8 +106,10 @@ meanImg = im/len(files)
 cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
 
+output:
 ![image](https://user-images.githubusercontent.com/72264974/104429624-d8ccc880-55ab-11eb-9179-5e7f2a085c6c.png)
 ![image](https://user-images.githubusercontent.com/72264974/104429716-f26e1000-55ab-11eb-9aaf-2f65bb506309.png)
+......
 
 Program4:
 Develop the program to convert color image to gray image and binary image.
@@ -132,10 +134,12 @@ ret,img1=c.threshold(gray,128,255,c.THRESH_BINARY)
 c.imshow('image',img1)
 c.waitKey(0)
 c.destroyAllWindows()
+output:
 
 ![image](https://user-images.githubusercontent.com/72264974/104430258-73c5a280-55ac-11eb-98a9-f26728982392.png)
 ![image](https://user-images.githubusercontent.com/72264974/104430305-82ac5500-55ac-11eb-8ade-7f4d35fe1999.png)
 ![image](https://user-images.githubusercontent.com/72264974/104430363-95bf2500-55ac-11eb-812a-3e65f7eca34c.png)
+........
 
 Program5:Develop the program to change the image to different color spaces.
 Color spaces in Opencv:
@@ -149,7 +153,7 @@ c.cvtColor(img,c.COLOR_BGR2RGB):used to convert BGR color space to RGB color spa
 cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
 cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
 
-
+#code
 
 import cv2 as c
 img=c.imread('Rose.jpg')
@@ -169,13 +173,14 @@ c.imshow('Result4',nimg3)
 c.waitKey(0)
 c.destroyAllWindows()
 
-
+output:
 ![image](https://user-images.githubusercontent.com/72264974/104430674-01a18d80-55ad-11eb-9b7f-f6e4e71994b2.png)
 ![image](https://user-images.githubusercontent.com/72264974/104430743-1847e480-55ad-11eb-9226-2946fbba2d4e.png)
 ![image](https://user-images.githubusercontent.com/72264974/104430862-40374800-55ad-11eb-8d62-065f46c18199.png)
 ![image](https://user-images.githubusercontent.com/72264974/104430986-64932480-55ad-11eb-8b4f-d3b9eee45c0f.png)
 ![image](https://user-images.githubusercontent.com/72264974/104431067-7b397b80-55ad-11eb-8971-60104cea5f1e.png)
 
+........
 Program6:
 Develop a program to create an image from 2D array (generate an array of random size).
  A image is an array or a matrix of squarepixe arranged in column and rows.
@@ -184,7 +189,7 @@ Develop a program to create an image from 2D array (generate an array of random 
  The numpy.zeros() function returns a new array of given shape and type, with zeros.
  cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
  
- 
+ #code
 import cv2 as c
 import numpy as np
 from PIL import Image
@@ -195,13 +200,34 @@ img = Image.fromarray(array)
 img.save('image1.png')
 img.show()
 c.waitKey(0)
-
+output:
 
 ![image](https://user-images.githubusercontent.com/72264974/104431674-2b0ee900-55ae-11eb-8acc-2ea47fe110ce.png)
+...........
+program7: program to  display the neighbouhood elements of  matrix:
 
+import numpy as np
+i=0
+j=0
+a= np.array([[1,2,3,4,5], [2,3,4,5,6],[3,4,5,6,7],[4,5,6,7,8],[5,6,7,8,9]])
+print("a :\n",str(a))
+def neighbors(radius, rowNumber, columnNumber):
+     return [[a[i][j] if  i >= 0 and i < len(a) and j >= 0 and j < len(a[0]) else 0
+                for j in range(columnNumber-1-radius, columnNumber+radius)]
+                    for i in range(rowNumber-1-radius, rowNumber+radius)]
+neighbors(1, 2, 3)
+ ......
+ output:
+  a :
+ [[1 2 3 4 5]
+ [2 3 4 5 6]
+ [3 4 5 6 7]
+ [4 5 6 7 8]
+ [5 6 7 8 9]]
+[[2, 3, 4], [3, 4, 5], [4, 5, 6]]
+
+ ...........
  Program 8:Program to find the sum  of neighbour values in  a matrix:
-   
-   
    
 import numpy as np
 
@@ -227,6 +253,7 @@ for i in range(M.shape[0]):
 
 print ("Original matrix:\n", M)
 print ("Summed neighbors matrix:\n", N) 
+....
 output:
  Original matrix:
  [[1 2 3 4 5]
@@ -240,3 +267,5 @@ Summed neighbors matrix:
  [18. 32. 40. 48. 32.]
  [23. 40. 48. 56. 37.]
  [15. 27. 32. 37. 23.]]
+ ...........
+ program to overload the  operator
