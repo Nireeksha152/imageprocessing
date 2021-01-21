@@ -386,7 +386,34 @@ int main()
  p * q;
 return 0;
 }
+
  **output:**
+ 
+ Enter the row and column size for the  matrix
+2
+2
+Enter the elements of the matrix
+7
+5
+6
+9
+Enter the row and column size for the  matrix
+2
+2
+Enter the elements of the matrix
+4
+5
+6
+1
+addition is
+ 11	10	
+ 12	10	
+subtraction is
+ 3	0	
+ 0	8	
+multiplication is
+ 58	40	
+ 78	39	
  
  
  
