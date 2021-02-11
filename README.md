@@ -444,7 +444,16 @@ c.destroyAllWindows()
 
 **Program 11:
 program  for transformation  of image to Gamma(Power Law transformation)  **
-
+```python
+import numpy as n
+import cv2 as c
+img=c.imread("i5.jpg")
+g1=n.array(255*(img/255)**2.2,dtype='uint8')
+g2= n.array(255*(img/255)**0.4,dtype='uint8')
+img1=c.hconcat([g1,g2])
+c.imshow("a2",img1)
+c.waitKey(0)
+```
 
  
  
