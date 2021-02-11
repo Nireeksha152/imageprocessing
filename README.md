@@ -419,6 +419,9 @@ subtraction is
 multiplication is
  58	40	
  78	39	
+ **program 10:
+ Develop the program to read gray scale image and convert the gray image to negative image.**
+ 
  
  
  
