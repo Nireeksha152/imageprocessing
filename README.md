@@ -440,6 +440,9 @@ c.imshow('negative',img_neg)
 c.waitKey(0)
 c.destroyAllWindows()
 ``
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/72264974/107623074-cc0cc480-6c7e-11eb-940d-503fd800ab51.png)
+![image](https://user-images.githubusercontent.com/72264974/107623157-ecd51a00-6c7e-11eb-9666-0b751b610ae2.png)
 ...............
 
 **Program 11:
