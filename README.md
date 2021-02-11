@@ -421,6 +421,31 @@ multiplication is
  78	39	
  **program 10:
  Develop the program to read gray scale image and convert the gray image to negative image.**
+     Image negative is produced by substracting   each pixel from the maximum intensity value example for an 8 bit image  the  max intensity value 255 thus each pixel is substracted  from 255 to produce the output image.
+     Thusn the transformation function used  in image negative is
+             S=T(r)=L-1-r
+      where L-1 is the max intensity value and  s and r are the output and input pixel values respectively.
+
+ 
+``python
+import cv2 as c
+import numpy as n
+#reading the image
+img=c.imread("i5.jpg",0)
+c.imshow("INPUT",img)
+c.waitKey(0)
+print(img.dtype)
+img_neg = 255 - img
+c.imshow('negative',img_neg)
+c.waitKey(0)
+c.destroyAllWindows()
+``
+...............
+
+**Program 11:
+program  for transformation  of image to Gamma(Power Law transformation)  **
+
+
  
  
  
