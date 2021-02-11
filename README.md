@@ -446,7 +446,14 @@ c.destroyAllWindows()
 ...............
 
 **Program 11:
-program  for transformation  of image to Gamma(Power Law transformation)  **
+program  for transformation  of image to Gamma(Power Law transformation) **
+
+The general form of Power law (Gamma) transformation function is
+
+s = c*rγ
+
+Where, ‘s’ and ‘r’ are the output and input pixel values, respectively and ‘c’ and γ are the positive constants. Like log transformation, power law curves with γ <1 map a narrow range of dark input values into a wider range of output values, with the opposite being true for higher input values. Similarly, for γ >1, we get the opposite result 
+
 ```python
 import numpy as n
 import cv2 as c
